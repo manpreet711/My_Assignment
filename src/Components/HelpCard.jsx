@@ -1,10 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
 const HelpSection = () => {
   return (
-    <div className="card text-center" style={{ marginTop: 68 }}>
+    <div className="card text-center" style={{ marginTop: 28 }}>
       <div className="card-body">
+        <FontAwesomeIcon
+          className="pl-5 mx-2"
+          color="grey"
+          icon={faQuestionCircle}
+        />
         <h5 className="card-title">Need Help ?</h5>
         <p className="card-text">Our Support Team is at your Disopsal.</p>
         <button>Get Help</button>

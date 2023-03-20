@@ -1,11 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import api from "../api";
+
 const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
-  const [emailList, setEmailList] = useState(contact.emailArray);
-  const [phoneList, setPhoneList] = useState(contact.phoneNumberArray);
-  console.log("hehe", contact);
+  const [emailList, setEmailList] = useState([contact.emailArray]);
+  const [phoneList, setPhoneList] = useState([]);
+
+  useEffect(() => {
+    setEmailList(contact.emailArray);
+    setPhoneList(contact.phoneNumberArray);
+  }, []);
 
   const handleSave = () => {
     const data = contact;
@@ -23,7 +26,7 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
   };
   const handleaddclick = (type) => {
     if (type === "email") {
-      setEmailList([...emailList, ""]);
+      setEmailList([...emailList, " "]);
     } else if (type === "contact") {
       setPhoneList([...phoneList, ""]);
     }
@@ -31,15 +34,8 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
   const handleEmailChange = (e, index) => {
     const { id, value } = e.target;
     const list = [...emailList];
-    // console.log("id", id);
-    // let x = document.getElementById(id);
-    // console.log("x", x);
-    // console.log("valye", value);
-    // console.log("x.value", x.value);
-    // x.value = value;
     list[index] = value;
     setEmailList(list);
-    e.target.focus();
   };
 
   const handleremove = (index, type) => {
@@ -60,7 +56,7 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
         <label>Email ID:</label>
         {emailList.map((emailData, i) => {
           return (
-            <div key={emailData}>
+            <div className="my-3" key={emailData}>
               <form>
                 <input
                   type="email"
@@ -84,7 +80,7 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
         <button
           type="button"
           onClick={() => handleaddclick("email")}
-          className="my-button"
+          className="my-button w-100 my-3"
         >
           Add More
         </button>
@@ -92,14 +88,13 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
         <label>Contact Number:</label>
         {phoneList.map((contactData, i) => {
           return (
-            <div key={contactData}>
+            <div className="my-3" key={contactData}>
               <form>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   onChange={(e) => handleContactChange(e, i)}
-                  // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                   value={contactData}
                 />
                 {phoneList.length !== 1 && (
@@ -117,7 +112,7 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
         <button
           type="button"
           onClick={() => handleaddclick("contact")}
-          className="my-button"
+          className="my-button w-100 my-3"
         >
           Add More
         </button>
@@ -125,10 +120,10 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
       <div>
         <button
           type="button"
-          className="btn btn-danger btn-lg btn-block p-3 py-2"
+          className="btn btn-danger btn-lg btn-block p-3 py-2 w-100"
           onClick={handleSave}
         >
-          SAVE
+          Save
         </button>
       </div>
     </>
