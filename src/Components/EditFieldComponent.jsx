@@ -19,7 +19,7 @@ const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
   };
 
   const handleContactChange = (e, index) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     const list = [...phoneList];
     list[index] = value;
     setPhoneList(list);
