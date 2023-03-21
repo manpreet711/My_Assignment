@@ -73,7 +73,7 @@ const MainComponent = () => {
         <h2 className="title">About Us</h2>
         <div className="title-section">
           <img
-            src="https://www.atinks.com/wp-content/uploads/2017/10/A.T-inks-logo-600-DPI-1-e1545645137933.png"
+            src="https://i.pinimg.com/736x/71/b3/e4/71b3e4159892bb319292ab3b76900930.jpg"
             alt="Profile image"
             width="64"
             height="62"

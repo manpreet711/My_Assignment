@@ -8,7 +8,7 @@ const Header = () => {
         <div className="container-fluid px-5">
           <a className="navbar-brand" href="#">
             <img
-              src="https://www.atinks.com/wp-content/uploads/2017/10/A.T-inks-logo-600-DPI-1-e1545645137933.png"
+              src="https://i.pinimg.com/736x/71/b3/e4/71b3e4159892bb319292ab3b76900930.jpg"
               alt=""
               width="55"
               height="50"
