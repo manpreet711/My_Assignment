@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../api";
 
 const EditFieldCard = ({ contact, toggleEditingContactFields }) => {
-  const [emailList, setEmailList] = useState([contact.emailArray]);
+  const [emailList, setEmailList] = useState([]);
   const [phoneList, setPhoneList] = useState([]);
 
   useEffect(() => {
