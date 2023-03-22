@@ -8,7 +8,7 @@ const AddressCard = () => {
         <div className="main-title my-2">
           <FontAwesomeIcon
             className="pl-5"
-            color="grey"
+            color="gray"
             icon={faMapMarker}
             size={"2x"}
           />

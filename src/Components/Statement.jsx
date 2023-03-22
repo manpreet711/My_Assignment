@@ -8,7 +8,7 @@ const StatementCard = () => {
         <div className="main-title my-2">
           <FontAwesomeIcon
             className="pl-5 mx-2"
-            color="grey"
+            color="gray"
             icon={faComment}
             size={"2x"}
           />

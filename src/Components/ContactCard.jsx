@@ -36,7 +36,7 @@ const ContactCard = ({
         <div className="main-title my-2">
           <FontAwesomeIcon
             className="pl-5 mx-2"
-            color="grey"
+            color="gray"
             icon={faUserCircle}
             size={"2x"}
           />
@@ -62,7 +62,7 @@ const ContactCard = ({
         <div className="card-text">
           <FontAwesomeIcon
             className="pl-5 mx-2 my-2"
-            color="grey"
+            color="gray"
             icon={faEnvelope}
           />
           {emailArray && emailArray.map((data) => data + " / ")}
@@ -75,7 +75,7 @@ const ContactCard = ({
         <div className="card-text my-4">
           <FontAwesomeIcon
             className="pl-5 mx-2 my-2"
-            color="grey"
+            color="gray"
             icon={faPhone}
           />
           {phoneNumberArray && phoneNumberArray.map((data) => data + " / ")}

@@ -1,5 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencil, faLink } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPencil,
+  faLink,
+  faGlobeAfrica,
+  faPeopleGroup,
+  faKiwiBird,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SocialMediaCard = () => {
   return (
@@ -8,7 +14,7 @@ const SocialMediaCard = () => {
         <div className="main-title my-2">
           <FontAwesomeIcon
             className="pl-5 mx-2"
-            color="grey"
+            color="gray"
             icon={faLink}
             size={"2x"}
           />
@@ -19,8 +25,44 @@ const SocialMediaCard = () => {
             icon={faPencil}
           />
         </div>
-        <p className="card-text">salsesTeam@br.in / salsesTeam2@br.in </p>
-        <p className="card-text">+91 3423456444 / +91 9688863434</p>
+        <div className="py-4 px-1 social-media">
+          <div className="social-media-div">
+            <FontAwesomeIcon
+              className="pl-5 mx-2"
+              color="gray"
+              icon={faGlobeAfrica}
+              size={"2x"}
+            />
+            <span>Website</span>
+          </div>
+          <div className="social-media-div">
+            <FontAwesomeIcon
+              className="pl-5 mx-2"
+              color="gray"
+              icon={faPeopleGroup}
+              size={"2x"}
+            />
+            <span>Instagram</span>
+          </div>
+          <div className="social-media-div">
+            <FontAwesomeIcon
+              className="pl-5 mx-2"
+              color="gray"
+              icon={faGlobeAfrica}
+              size={"2x"}
+            />
+            <span>Facebook</span>
+          </div>
+          <div className="social-media-div">
+            <FontAwesomeIcon
+              className="pl-5 mx-2"
+              color="gray"
+              icon={faKiwiBird}
+              size={"2x"}
+            />
+            <span>Twitter</span>
+          </div>
+        </div>
       </div>
     </div>
   );

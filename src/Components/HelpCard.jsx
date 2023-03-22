@@ -7,7 +7,7 @@ const HelpSection = () => {
       <div className="card-body">
         <FontAwesomeIcon
           className="pl-5 mx-2"
-          color="grey"
+          color="gray"
           icon={faQuestionCircle}
         />
         <h5 className="card-title">Need Help ?</h5>
