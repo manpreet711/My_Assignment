@@ -40,6 +40,7 @@ const EditContactModal = ({
           {contact.map((data) => {
             return (
               <ContactCard
+                key={data.id}
                 setTeam={setTeam}
                 teamName={data.teamName}
                 teamId={data.id}
